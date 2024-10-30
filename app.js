@@ -7,21 +7,24 @@ var app = express();
 // Load Handlebars
 const exphbs = require('express-handlebars'); 
 
-const fs = require('fs');
+const fs = require('fs').promises;
 // Server port
 const port = process.env.port || 3000; 
 
 let moviesData;
 
 // Load movie data once when the server starts
-fs.readFile(path.join(__dirname,'./movie-dataset-a2-.json'), 'utf8', (err, data) => {
-    if (err) {
+async function loadMovieData() {
+    try {
+        const data = await fs.readFile(path.join(__dirname, 'movie-dataset-a2-.json'), 'utf8');
+        moviesData = JSON.parse(data);
+        console.log('Movies data loaded successfully');
+    } catch (err) {
         console.error('Error loading JSON data:', err);
         process.exit(1); // Exit if there's an error loading data
     }
-    moviesData = JSON.parse(data);
-    console.log('Movies data loaded successfully');
-});
+}
+loadMovieData();
 
 // Set up to serve files from "public" folder
 app.use(express.static(path.join(__dirname, 'public'))); 
