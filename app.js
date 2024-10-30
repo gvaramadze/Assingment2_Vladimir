@@ -9,7 +9,7 @@ const exphbs = require('express-handlebars');
 
 const fs = require('fs').promises;
 // Server port
-const port = process.env.port || 3000; 
+//const port = process.env.port || 3000; 
 
 let moviesData;
 
