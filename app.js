@@ -9,7 +9,7 @@ const exphbs = require('express-handlebars');
 
 const fs = require('fs');
 // Server port
-//const port = process.env.port || 3000; 
+const port = process.env.port || 3000; 
 
 let moviesData;
 
@@ -130,8 +130,7 @@ app.get('*', function (req, res) {
     res.render('error', { title: 'Error', message: 'Wrong Route' });
 });
 
-module.exports = app;
 // Start server and listen on set port
-// app.listen(port, () => {
-//     console.log(`Example app listening at http://localhost:${port}`)
-// })
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
