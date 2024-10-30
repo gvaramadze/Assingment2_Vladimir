@@ -25,7 +25,7 @@ async function loadMovieData() {
     }
 }
 loadMovieData();
-
+app.set('views', path.join(__dirname, 'views'));
 // Set up to serve files from "public" folder
 app.use(express.static(path.join(__dirname, 'public'))); 
 
