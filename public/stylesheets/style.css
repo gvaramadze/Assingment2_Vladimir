@@ -1,0 +1,49 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: #f3f3f3;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #f3f3f3;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center; 
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; 
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: red;
+}

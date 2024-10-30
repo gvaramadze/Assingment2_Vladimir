@@ -1,0 +1,16 @@
+<h2>{{title}}</h2>
+<table>
+    {{> tableHeader}}
+    <tbody>
+        {{#each sales}}
+            <tr class="{{highlightIfNoWebsite this.Website}}">
+                <td>{{this.Movie_ID}}</td>
+                <td>{{this.Title}}</td>
+                <td>{{this.Year}}</td>
+                <td>{{this.Genre}}</td>
+                <td>{{this.Director}}</td>
+                <td>{{this.Website}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,6 @@
+<h2>All Movies</h2>
+<ul>
+    {{#each movies}}
+        <li><a href="/data/movie/{{@index}}">{{this.Title}}</a></li>
+    {{/each}}
+</ul>
