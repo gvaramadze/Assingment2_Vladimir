@@ -133,7 +133,7 @@ app.get('*', function (req, res) {
     res.render('error', { title: 'Error', message: 'Wrong Route' });
 });
 
-// Start server and listen on set port
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+// // Start server and listen on set port
+// app.listen(port, () => {
+//     console.log(`Example app listening at http://localhost:${port}`)
+// })
